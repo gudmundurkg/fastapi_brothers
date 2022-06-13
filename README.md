@@ -1,6 +1,6 @@
 # fastapi_brothers
 
-## Iteration 1 - 12.06.22
+## Iteration 1 - 16.06.22
 - /car
 - /subscriptions
 - db - non persistant data
