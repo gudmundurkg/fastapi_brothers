@@ -1,6 +1,6 @@
 # fastapi_brothers
 
-## Iteration 1 - 17.06.22 (f0r realzies)
+## Iteration 1 - 19.06.22 (f0r realzies)
 
 - /car
 - /subscriptions
