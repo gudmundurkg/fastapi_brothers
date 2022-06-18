@@ -3,22 +3,22 @@ from fastapi import FastAPI
 app = FastAPI()
 
 db = [
-    {"id": 0, "name": "The House of Kobe", "location": "Los Angeles, CA", "price": "$$$", "take_away": "false", "delivery": "false" },
-    {"id": 1, "name": "The House of Pasta", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "false", "delivery": "false" },
-    {"id": 2, "name": "The House of Bagels", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "false", "delivery": "false" },
-    {"id": 3, "name": "The House of Pizzas", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "false", "delivery": "false" },
-    {"id": 4, "name": "The House of Burgers", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "false", "delivery": "false" },
-    {"id": 5, "name": "The House of Tacos", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "false", "delivery": "false" },
-    {"id": 6, "name": "The House of Sushi", "location": "1123 Main St, Anytown, CA 12345", "price": "$$$", "take_away": "false", "delivery": "false" },
-    {"id": 7, "name": "The House of Steak", "location": "1123 Main St, Anytown, CA 12345", "price": "$$$", "take_away": "false", "delivery": "false" },
-    {"id": 8, "name": "Dominos", "location": "Los Angeles, CA", "price": "$", "take_away": "true", "delivery": "true"},
-    {"id": 9, "name": "Pizza Hut", "location": "1123 Main St, Anytown, CA 12345", "price": "$", "take_away": "true", "delivery": "true"},
-    {"id": 10, "name": "Subway", "location": "1123 Main St, Anytown, CA 12345", "price": "$", "take_away": "true", "delivery": "true"},
-    {"id": 11, "name": "McDonalds", "location": "1123 Main St, Anytown, CA 12345", "price": "$", "take_away": "true", "delivery": "true"},
-    {"id": 12, "name": "KFC", "location": "1123 Main St, Anytown, CA 12345", "price": "$", "take_away": "true", "delivery": "true"},
-    {"id": 13, "name": "Taco Bell", "location": "1123 Main St, Anytown, CA 12345", "price": "$", "take_away": "true", "delivery": "true"},
-    {"id": 14, "name": "Wendy's", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "true", "delivery": "true"},
-    {"id": 15, "name": "Burger King", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "true", "delivery": "true"},
+    {"id": 0, "name": "The House of Kobe", "location": "Los Angeles, CA", "price": "$$$", "take_away": "false", "delivery": "false", "opening_hours": "10:00-22:00" },
+    {"id": 1, "name": "The House of Pasta", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "false", "delivery": "false", "opening_hours": "10:00-22:00" },
+    {"id": 2, "name": "The House of Bagels", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "false", "delivery": "false", "opening_hours": "10:00-22:00" },
+    {"id": 3, "name": "The House of Pizzas", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "false", "delivery": "false", "opening_hours": "11:00-20:00" },
+    {"id": 4, "name": "The House of Burgers", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "false", "delivery": "false", "opening_hours": "10:00-19:00" },
+    {"id": 5, "name": "The House of Tacos", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "false", "delivery": "false", "opening_hours": "10:00-22:00" },
+    {"id": 6, "name": "The House of Sushi", "location": "1123 Main St, Anytown, CA 12345", "price": "$$$", "take_away": "false", "delivery": "false", "opening_hours": "10:00-22:00" },
+    {"id": 7, "name": "The House of Steak", "location": "1123 Main St, Anytown, CA 12345", "price": "$$$", "take_away": "false", "delivery": "false", "opening_hours": "10:00-22:00" },
+    {"id": 8, "name": "Dominos", "location": "Los Angeles, CA", "price": "$", "take_away": "true", "delivery": "true", "opening_hours": "10:00-22:00" },
+    {"id": 9, "name": "Pizza Hut", "location": "1123 Main St, Anytown, CA 12345", "price": "$", "take_away": "true", "delivery": "true", "opening_hours": "10:00-22:00" },
+    {"id": 10, "name": "Subway", "location": "1123 Main St, Anytown, CA 12345", "price": "$", "take_away": "true", "delivery": "true", "opening_hours": "10:00-22:00" },
+    {"id": 11, "name": "McDonalds", "location": "1123 Main St, Anytown, CA 12345", "price": "$", "take_away": "true", "delivery": "true", "opening_hours": "10:00-22:00" },
+    {"id": 12, "name": "KFC", "location": "1123 Main St, Anytown, CA 12345", "price": "$", "take_away": "true", "delivery": "true", "opening_hours": "10:00-22:00" },
+    {"id": 13, "name": "Taco Bell", "location": "1123 Main St, Anytown, CA 12345", "price": "$", "take_away": "true", "delivery": "true", "opening_hours": "10:00-22:00" },
+    {"id": 14, "name": "Wendy's", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "true", "delivery": "true", "opening_hours": "10:00-22:00" },
+    {"id": 15, "name": "Burger King", "location": "1123 Main St, Anytown, CA 12345", "price": "$$", "take_away": "true", "delivery": "true", "opening_hours": "10:00-22:00" },
 ]
 
 @app.get("/food/")
