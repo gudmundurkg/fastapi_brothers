@@ -25,9 +25,9 @@ def get_freetime(location: str|None = None, opening_hours: str|None = None):
 # http://127.0.0.1:8000/freetime/opening-hours?lower_opening=10&upper_opening=22
 # http://127.0.0.1:8000/freetime/opening-hours?lower_opening=23&upper_opening=24 (should returns all day openings)
 @app.get("/freetime/opening-hours")
-def get_freetime_opening_hours(lower_opening: str|None = None, upper_opening: str|None = None):    
+def get_freetime_opening_hours(lower_opening: int|None = None, upper_opening: int|None = None) -> list:    
     if lower_opening is not None and upper_opening is not None:
-        opening_hours = [item for item in db if item["opening_hours"] >= lower_opening and item["opening_hours"] <= upper_opening]
+        opening_hours = [item for item in db if int(item["opening_hours"].split("-")[0]) >= lower_opening and int(item["opening_hours"].split("-")[1]) <= upper_opening]
         all_day_openings = [item for item in db if item["opening_hours"] == "99-99"]
         return opening_hours + all_day_openings        
     else:
