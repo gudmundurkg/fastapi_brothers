@@ -29,9 +29,9 @@ db = [
 def get_food(price: str|None = None, take_away: bool|None = None, delivery: bool|None = None) -> list:
     if price is not None:
         return [d for d in db if d["price"] == price]
-    if take_away is not None:
+    elif take_away is not None:
         return [d for d in db if d["take_away"] == take_away]
-    if delivery is not None:
+    elif delivery is not None:
         print(delivery)
         return [d for d in db if d["delivery"] == delivery]
     else:
@@ -40,7 +40,7 @@ def get_food(price: str|None = None, take_away: bool|None = None, delivery: bool
 # http://127.0.0.1:8000/food/price-range?lower_price=$$
 # http://127.0.0.1:8000/food/price-range?lower_price=$$&upper_price=$$$
 @app.get("/food/price-range")
-def get_food_by_id_with_price_range(lower_price: str|None = None, upper_price: str|None = None, flexible: str|None = None):
+def get_food_with_price_range(lower_price: str|None = None, upper_price: str|None = None, flexible: str|None = None):
     if lower_price is not None and upper_price is not None:
         return [d for d in db if d["price"] >= lower_price and d["price"] <= upper_price]
     elif lower_price is not None and flexible is True:
