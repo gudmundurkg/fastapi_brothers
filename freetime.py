@@ -2,6 +2,10 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+<<<<<<< HEAD
+=======
+# stuff do in free time, eventful stuff in city centers of america
+>>>>>>> b81d315c651c6049a01b4d6c3b3be2df11c56c6b
 db = [
     {"id": 0, "name": "basketball", "location": "California" "locationLatLon": {"lat": 40.7128, "lon": -74.0060}, "opening_hours": "99-99"},
     {"id": 1, "name": "baseball", "location": "New York" "locationLatLon": {"lat": 40.7128, "lon": -74.0060}, "opening_hours": "99-99"},
